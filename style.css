@@ -1,0 +1,14 @@
+:root {
+  --background-color: white;
+  --text-color: black;
+}
+
+.dark-mode__heading {
+  color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-mode__paragraph {
+  color: var(--background-color);
+  color: var(--text-color);
+}
