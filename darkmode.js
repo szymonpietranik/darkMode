@@ -227,3 +227,19 @@ hamburgerBtn.addEventListener("click", () => {
   const hamburgerNav = document.querySelector(".navigation--js");
   hamburgerNav.classList.toggle("navigation--open");
 });
+/* dark mode */
+const darkModebtn = document.querySelector(".dark-mode__button--js");
+let isDark = false;
+
+darkModebtn.addEventListener("click", () => {
+  console.log(isDark);
+  if (isDark) {
+    document.documentElement.style.setProperty("--background-color", "");
+    document.documentElement.style.setProperty("--text-color", "");
+    isDark = false;
+  } else {
+    document.documentElement.style.setProperty("--background-color", "#000000");
+    document.documentElement.style.setProperty("--text-color", "violet");
+    isDark = true;
+  }
+});

@@ -9,8 +9,3 @@ console.log(something);
 
 console.log(hello.pleaseSayHello());
 console.log(hello.szymi);
-
-let isDark = false;
-
-document.documentElement.style.setProperty("--zmienna", "wartość");
-const button = document.querySelector(".dark-mode__button--js");
