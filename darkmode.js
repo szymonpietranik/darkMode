@@ -22,8 +22,6 @@ function createContent(querySelectorContent, content) {
 
 createContent(".dark-mode__heading--js", "Zmieniony za pomocą funkcji JS");
 
-createContent(".dark-mode__paragraph-js", "dsadsa");
-
 function greet(age, name) {
   console.log(`Nazywam się ${name} i mam ${age} lat.`);
 }
@@ -200,3 +198,21 @@ console.log(result1);
 const result = humanOne.age < humanThree.age ? age : false;
 
 console.log(result);
+
+/* zmiana nagłówka */
+const btn = document.querySelector(".change__button--js");
+
+/* wersja 1,funkcja strzałkowa: const handleClick = () =>, */
+function handleClick() {
+  console.log("click click");
+  const head = document.querySelector(".change__heading--js");
+  head.innerHTML = "hello there I'm JS what's your name? ";
+}
+btn.addEventListener("click", handleClick);
+
+/*wersja 2*/
+btn.addEventListener("click", () => {
+  console.log("click click");
+  const head = document.querySelector(".change__heading--js");
+  head.innerHTML = "hello there I'm JS what's your name? ";
+});
