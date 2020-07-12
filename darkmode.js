@@ -215,4 +215,15 @@ btn.addEventListener("click", () => {
   console.log("click click");
   const head = document.querySelector(".change__heading--js");
   head.innerHTML = "hello there I'm JS what's your name? ";
+  /* dodanie klasy przez JS*/
+  head.classList.add("klasa-z-js");
+  console.log(head.classList.contains("change__heading"));
+});
+
+/* hamburger menu */
+const hamburgerBtn = document.querySelector(".hamburger--js");
+
+hamburgerBtn.addEventListener("click", () => {
+  const hamburgerNav = document.querySelector(".navigation--js");
+  hamburgerNav.classList.toggle("navigation--open");
 });
