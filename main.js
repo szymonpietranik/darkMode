@@ -80,3 +80,42 @@ const secondArray = ["a", "b", "c", { name: "szymon" }];
 for (let element of secondArray) {
   console.log(element);
 }
+
+// JS localstorage //
+localStorage.setItem("human", "szymon");
+
+console.log(localStorage.getItem("human"));
+
+console.log(localStorage.removeItem("human"));
+
+localStorage.setItem("nowyKlucz", JSON.stringify({ name: "szymon" }));
+
+console.log(localStorage.getItem("nowyKlucz"));
+
+const myResult = localStorage.getItem("nowyKlucz");
+
+const myNewObject = JSON.parse(myResult);
+
+console.log(JSON.parse(myResult));
+
+myNewObject.newProperty = "hi";
+
+console.log(myNewObject);
+
+const entry = localStorage.getItem("entry");
+let result = "";
+
+if (entry) {
+  result = entry;
+}
+
+const entryInput = document.querySelector(".entry--js");
+entryInput.value = result;
+
+const entrybtn = document.querySelector(".entrybtn--js");
+
+console.log(entrybtn);
+
+entrybtn.addEventListener("click", () => {
+  localStorage.setItem("entry", entryInput.value);
+});
