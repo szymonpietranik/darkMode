@@ -234,8 +234,8 @@ let isDark = false;
 darkModebtn.addEventListener("click", () => {
   console.log(isDark);
   if (isDark) {
-    document.documentElement.style.setProperty("--background-color", "");
-    document.documentElement.style.setProperty("--text-color", "");
+    document.documentElement.style.setProperty("--background-color", "white");
+    document.documentElement.style.setProperty("--text-color", "black");
     isDark = false;
   } else {
     document.documentElement.style.setProperty("--background-color", "#000000");
